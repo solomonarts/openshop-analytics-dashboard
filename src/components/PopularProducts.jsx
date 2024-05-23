@@ -1,6 +1,7 @@
 import classNames from 'classnames'
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { products } from '../lib/constants'
 
 const popularProducts = [
 	{
@@ -52,7 +53,7 @@ function PopularProducts() {
 		<div className="w-[20rem] bg-white p-4 rounded-sm border border-gray-200">
 			<strong className="text-gray-700 font-medium">Popular Products</strong>
 			<div className="mt-4 flex flex-col gap-3">
-				{popularProducts.map((product) => (
+				{products.map((product) => (
 					<Link
 						key={product.id}
 						to={`/product/${product.id}`}
@@ -66,7 +67,7 @@ function PopularProducts() {
 							/>
 						</div>
 						<div className="ml-4 flex-1">
-							<p className="text-sm text-gray-800">{product.product_name}</p>
+							<p className="text-sm text-gray-800">{product.title}</p>
 							<span
 								className={classNames(
 									product.product_stock === 0

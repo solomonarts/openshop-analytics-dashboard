@@ -5,7 +5,7 @@ import { getOrderStatus } from '../lib/helpers'
 import { getOrders } from '../Common'
 import { products } from '../lib/constants'
 
-export default function RecentOrders() {
+export default function Orders() {
     const [orders, setOrders] = useState()
 
     useEffect(() => {
